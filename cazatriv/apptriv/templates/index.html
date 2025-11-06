@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CazaTriv - App de Trivias</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">🎯</span>
+            <span class="logo-text">CazaTriv</span>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">
+                <span class="icon">🏠</span>
+                <span>Inicio</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">▶️</span>
+                <span>Jugar Trivia</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">📚</span>
+                <span>Categorías</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">🏆</span>
+                <span>Ranking</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">🕐</span>
+                <span>Historial</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">👑</span>
+                <span>Logros</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">⚙️</span>
+                <span>Configuración</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon">❓</span>
+                <span>Ayuda</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div>
+                    <h1>Bienvenido a CazaTriv</h1>
+                    <p>Caza el conocimiento</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-secondary">🔔 Notificaciones</button>
+                    <button class="btn-primary">👤 Perfil</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>¡Desafía tu conocimiento!</h2>
+                <p>Juega trivias en múltiples categorías y compite con jugadores de todo el mundo</p>
+                <button class="btn-hero">Comenzar a Jugar ▶️</button>
+            </div>
+        </section>
+
+        <!-- Stats Cards -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">🎮</div>
+                <div class="stat-info">
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">Partidas Jugadas</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <div class="stat-value">89%</div>
+                    <div class="stat-label">Precisión</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <div class="stat-value">2,450</div>
+                    <div class="stat-label">Puntos Totales</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Racha Actual</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <section class="content-grid">
+            <!-- Recent Activity -->
+            <div class="card">
+                <h3>Actividad Reciente</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-icon">🏆</span>
+                        <div class="activity-details">
+                            <div class="activity-title">Victoria en Ciencias</div>
+                            <div class="activity-time">Hace 2 horas</div>
+                        </div>
+                        <div class="activity-points">+150 pts</div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">⭐</span>
+                        <div class="activity-details">
+                            <div class="activity-title">Nuevo logro desbloqueado</div>
+                            <div class="activity-time">Hace 5 horas</div>
+                        </div>
+                        <div class="activity-points">+50 pts</div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">🎯</span>
+                        <div class="activity-details">
+                            <div class="activity-title">Racha de 10 victorias</div>
+                            <div class="activity-time">Ayer</div>
+                        </div>
+                        <div class="activity-points">+200 pts</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Categories -->
+            <div class="card">
+                <h3>Categorías Populares</h3>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <span class="category-emoji">🔬</span>
+                        <span class="category-name">Ciencias</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-emoji">📜</span>
+                        <span class="category-name">Historia</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-emoji">🎬</span>
+                        <span class="category-name">Entretenimiento</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-emoji">⚽</span>
+                        <span class="category-name">Deportes</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-emoji">🌍</span>
+                        <span class="category-name">Geografía</span>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-emoji">🎨</span>
+                        <span class="category-name">Arte</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Modes -->
+        <section class="game-modes">
+            <h2>Modos de Juego</h2>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <div class="mode-image">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=450&fit=crop" alt="Modo Rápido">
+                        <div class="mode-overlay">
+                            <h4>⚡ Modo Rápido</h4>
+                            <p>10 preguntas en 5 minutos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop" alt="Modo Desafío">
+                        <div class="mode-overlay">
+                            <h4>🎯 Modo Desafío</h4>
+                            <p>Compite contra otros jugadores</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-image">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=450&fit=crop" alt="Modo Práctica">
+                        <div class="mode-overlay">
+                            <h4>📚 Modo Práctica</h4>
+                            <p>Aprende sin presión de tiempo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
