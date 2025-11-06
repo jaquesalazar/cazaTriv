@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Jugar - {{ categoria }}</title>
+  <link rel="stylesheet" href="{% static 'apptriv/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>{{ categoria }}</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {% for p in preguntas %}
+        <div class="pregunta">
+          <p><strong>{{ forloop.counter }}. {{ p.pregunta }}</strong></p>
+          {% for opcion in p.opciones %}
+            <label><input type="radio" name="p{{ forloop.parentloop.counter0 }}" value="{{ opcion }}"> {{ opcion }}</label><br>
+          {% endfor %}
+        </div>
+      {% endfor %}
+      <button type="submit" class="btn">Enviar respuestas</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CazaTriv - Inicio</title>
+  <link rel="stylesheet" href="{% static 'apptriv/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>¡Bienvenido a CazaTriv!</h1>
+    <p>Desafía tu conocimiento jugando trivias.</p>
+    <a href="{% url 'categorias' %}" class="btn">Comenzar</a>
+  </div>
+</body>
+</html>
